@@ -1,7 +1,7 @@
 local Energy = {
     max_energy = 100.0,
     
-    tickRate = 20,
+    tick_rate = 20,
     decay_per_usage = 0.1,
 
     energy = 100.0,
@@ -53,7 +53,7 @@ end
 function Energy:tick()
     self:updateUsage()
 
-    self.energy = self.energy - (self.usage * self.decayPerUsage)
+    self.energy = self.energy - (self.usage * self.decay_per_usage)
     
     print("Energy: " .. self.energy .. " | Usage: " .. self.usage)
 
@@ -65,7 +65,7 @@ end
 function Energy:start()
     while true do
         self:tick()
-        os.sleep(1.0 / self.tickRate)
+        os.sleep(1.0 / self.tick_rate)
     end
 end
 
