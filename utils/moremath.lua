@@ -1,10 +1,3 @@
-function nilcheck(value, message)
-    if value == nil
-    then
-        print("nil check warning: " .. message)
-    end
-end
-
 function ternary(condition, if_true, if_false)
     if condition then
         return if_true
@@ -15,6 +8,12 @@ end
 
 function percentify(v)
     return math.floor(v * 100) .. "%"
+end
+
+function clamp(value, min, max)
+	if value < min then return min
+	elseif value > max then return max
+	else return value end
 end
 
 function redstone_to_float(value)
@@ -36,8 +35,9 @@ function float_to_redstone(value)
     return math.floor(value * 15.0)
 end
 
-function clamp(value, min, max)
-	if value < min then return min
-	elseif value > max then return max
-	else return value end
+function nilcheck(value, message)
+    if value == nil
+    then
+        print("nil check warning: " .. message)
+    end
 end
