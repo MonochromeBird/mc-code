@@ -51,7 +51,7 @@ function Energy:updateUsage()
 end
 
 function Energy:tick()
-    updateUsage()
+    self:updateUsage()
 
     self.energy = self.energy - (self.usage * self.decayPerUsage)
     
