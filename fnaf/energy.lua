@@ -1,7 +1,7 @@
 local Energy = {
     max_energy = 100.0,
     
-    tickRate = 20
+    tickRate = 20,
     decay_per_usage = 0.1,
 
     energy = 100.0,
